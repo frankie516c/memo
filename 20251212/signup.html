@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Pretendard",sans-serif; }
+body { height:100vh; display:flex; justify-content:center; align-items:center; background: linear-gradient(135deg,#6a85ff,#8ec5fc);}
+.container { width:380px; padding:40px; background:rgba(255,255,255,0.15); backdrop-filter:blur(15px); border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,0.2); text-align:center;}
+h2 { color:#fff; margin-bottom:25px; }
+input { width:100%; padding:12px; margin-bottom:15px; border:none; border-radius:10px; outline:none; background: rgba(255,255,255,0.75);}
+.btn { width:100%; padding:14px; border:none; border-radius:12px; background:#4e6cff; color:#fff; font-size:16px; cursor:pointer; transition:0.3s;}
+.btn:hover { background:#3e56d8; }
+.link { margin-top:20px; font-size:14px; color:#fff; }
+.link a { color:#fff; text-decoration:underline; font-weight:600; }
+@media(max-width:420px){ .container{ width:90%; padding:30px; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>회원가입</h2>
+    <input type="text" id="newId" placeholder="아이디">
+    <input type="email" id="newEmail" placeholder="이메일">
+    <input type="password" id="newPw" placeholder="비밀번호">
+    <input type="password" id="confirmPw" placeholder="비밀번호 확인">
+    <button class="btn" onclick="signup()">회원가입</button>
+    <div class="link">
+        이미 계정이 있으신가요? <a href="login.html">로그인</a>
+    </div>
+</div>
+
+<script>
+function signup(){
+    const id = document.getElementById('newId').value.trim();
+    const email = document.getElementById('newEmail').value.trim();
+    const pw = document.getElementById('newPw').value;
+    const confirm = document.getElementById('confirmPw').value;
+    if(!id || !email || !pw || !confirm){ alert('모든 항목을 입력해주세요.'); return; }
+    if(pw !== confirm){ alert('비밀번호가 일치하지 않습니다.'); return; }
+    alert('회원가입 완료!');
+    window.location.href = 'login.html';
+}
+</script>
+
+</body>
+</html>
