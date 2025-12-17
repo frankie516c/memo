@@ -1,3 +1,4 @@
+main.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -170,14 +171,14 @@
 			</div>
 
 			<div class="movie">
-				<a href="movie.html" class="movie-link">
+				<a href="box.html" class="movie-link">
 					<div class="product-image">
 						<img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/1WHt/image/XCtoE8NZoocIVrlo0TN7oeFTXog.jpg" class="feature-img"/>
 						<div class="type">Box</div>
 					</div>
 					<div class="detail">
-						<p class="year">2025</p>
-						<h3>Color of Pommogrant</h3>
+						<p class="year">1969</p>
+						<h3>Color of pomegranates</h3>
 					</div>
 				</a>
 			</div>
@@ -185,4 +186,177 @@
 	</main>
 </body>
 </html>
+```
+
+movie.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankie's Movieland</title>
+      <link rel="stylesheet" type="text/css" href="common.css" />
+	<style>
+	.home .movie-detail {
+		padding: 16px;
+	}
+	.home .movie-detail h2 {
+		color: #FFF;
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+	.home .movie-detail span {
+		margin: 0 16px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: red;
+		color: #FFF;
+		font-size: 18px;
+	}
+	.home .movie-detail .featured-img {
+		display: block;
+		max-width: 100%;
+		margin-bottom: 16px;		
+	}
+	.home .movie-detail p {
+		color: #FFF;
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	.home .movie-detail .text-center {
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+    <header>
+        <a href="main.html">
+            <h1><span>Frankie's</span>Movie</h1>
+        </a>
+    </header>
+    <main class="home">
+        <div class="movie-detail">
+            <div>
+                <h2>The Fall<span>Movie</span></h2>
+                <p>2006</p>
+				<p>USA</p>
+				<img src="https://taylorholmes.com/wp-content/uploads/2018/07/The-Fall-Mindjob-Movie-Explained.jpg" alt="Movie Poster" class="featured-img" />
+				<p>The Fall (2006) introduces us to a 1920s Los Angeles hospital where injured stuntman Roy Walker befriends young patient Alexandria, beginning a fantastical story about five heroes seeking revenge on an evil governor, a tale that blurs reality as Alexandria's imagination brings Roy's words to life, while Roy secretly uses her to help him get morphine for suicide. </p>
+            </div>
+			<hr>
+			<div class="text-center">
+				<h2>Now on Netflix</h2>
+				<p>Five Star Movie</p>
+			</div>
+        </div>
+    </main>
+</body>
+</html>
+```
+
+box.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankie's Movieland</title>
+      <link rel="stylesheet" type="text/css" href="common.css" />
+	<style>
+	.home .movie-detail {
+		padding: 16px;
+	}
+	.home .movie-detail h2 {
+		color: #FFF;
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+	.home .movie-detail span {
+		margin: 0 16px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: red;
+		color: #FFF;
+		font-size: 18px;
+	}
+	.home .movie-detail .featured-img {
+		display: block;
+		max-width: 100%;
+		margin-bottom: 16px;		
+	}
+	.home .movie-detail p {
+		color: #FFF;
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	.home .movie-detail .text-center {
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+    <header>
+        <a href="main.html">
+            <h1><span>Frankie's</span>Movie</h1>
+        </a>
+    </header>
+    <main class="home">
+        <div class="movie-detail">
+            <div>
+                <h2>Color of pomegranates<span>Movie</span></h2>
+                <p>1969</p>
+				<p>Armenia</p>
+				<img src="https://mblogthumb-phinf.pstatic.net/MjAyMTAxMTlfMTcz/MDAxNjExMDIzNTU2Mjc5.oHzXJP-QCKFjZhFA9j1fxolvqNR81m2EjqI5peJ0gKog.Gwx1r-zaH-WBomkWm789iOktB3Yo45yLvuHOo2B5RI4g.JPEG.busancinema/%EC%84%9D%EB%A5%98%EC%9D%98_%EB%B9%9B%EA%B9%942.jpg?type=w800" alt="Movie Poster" class="featured-img" />
+				<p>The Color of Pomegranates (1969) is a visually stunning, non-linear Armenian film by Sergei Parajanov, depicting the life of poet Sayat-Nova through symbolic, painterly tableaus rather than traditional narrative, rich with Armenian culture, folklore, and religious imagery, especially featuring the pomegranate's symbolic reds and golds as metaphors for life, love, and spirit, making it a landmark of poetic cinema. </p>
+            </div>
+			<hr>
+			<div class="text-center">
+				<h2>Now on Screen</h2>
+				<p>Five Star Movie</p>
+			</div>
+        </div>
+    </main>
+</body>
+</html>
+```
+
+common.css
+```html
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+*::selection {
+    background: ;
+}
+body {
+    background-color: black;
+}
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: rgb(128, 4, 4);
+    box-shadow: 0px 0px 6px rgba(0,0,0, 0.1);
+}
+
+header h1 {
+    color: red;
+    font-size: 28px;
+}
+
+header h1 span {
+    color: white
+}
 ```
