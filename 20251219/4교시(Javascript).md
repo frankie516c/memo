@@ -1,4 +1,5 @@
-<h1>Javascript</h1>
+<h1>Javascript</h1> 
+- url: https://github.com/ESG-EDU/Docs/tree/main/javascript<br />
 - ECMAScript=ES=Jas<br />
 - Node.js: browser console용에서 서버용으로 진출=풀스택 가능해짐<br />
 - Javascript는 백엔드에 사용하는데 한계가 있음<br />
@@ -7,7 +8,8 @@
 - React, Vue, Angular로 SPA* 개발 가속<br />
 * Single Page Application (html 하나로 끝)<br />
 <br />
-ES6(2015) 이후: 혁신적 변화 https://www.w3schools.com/js/js_es6.asp<br />
+ES6(2015) 이후: 혁신적 변화<br />
+url: https://www.w3schools.com/js/js_es6.asp<br />
 <br />
 <h2>내 목표</h2>
 (6) 데이터 시각화 / 머신러닝<br />
