@@ -33,7 +33,8 @@ script 태그 사용법
     - 문자는 연산을 할 수 없기 때문
         - e.g., 5+"1"=51 
     - `==`는 값만 비교, `===`는 자료형 비교
-        - e.g., 5 == "5" : ture (같은 값이니까)
+        - e.g., 5 =<img width="980" height="1040" alt="캡처" src="https://github.com/user-attachments/assets/fe4f1bc0-65a3-4f47-82ec-c881a23bae50" />
+= "5" : ture (같은 값이니까)
         - e.g., 5 === "5" : false (숫자와 문자니까)
     - 특이점: 사칙연산 외 나머지와 몫도 구할 수 있음
 - 변수 선언
