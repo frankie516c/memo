@@ -230,3 +230,47 @@ const App = () => {
 export default App
 ```
 - `return`의 <Html /> 위아래에 `<ul></ul>`을 넣는 방법이 있음
+
+이나라님 답
+```
+const Page1 = () => <h1>상단 화면</h1>
+const Page2 = () => <h1>하단 화면</h1>
+
+const Main = () => {
+  const arr = ["1번", "2번", "3번"]
+  const Html = () => {
+    const list = [];
+    for (let num of arr) {
+      list.push(<li key={num}>{num}</li>);
+    }
+
+  return ( 
+    <>
+    {list}
+    </>
+  )
+}
+  return(
+  <ul>
+  <Html />
+  </ul>
+  )
+}
+
+const App = () => {
+  return (
+    <> 
+      <Page1 />
+      
+      <Main />
+      
+      <Page2 />
+    </>
+  )
+}
+
+export default App
+```
+- `arr`을 이용해서 꺼내오는 방법을 사용
+- `for문` 사용
+- `.push` 사용
