@@ -107,7 +107,11 @@
 
 이채훈님 디스코드 공유 답
 ```
-  const Html = () => 
+const Page1 = () => <h1>상단 화면</h1>
+const Page2 = () => <h1>하단 화면</h1>
+
+const Main = () => {
+const Html = () => 
 <> 
   <li>1번</li>
   <li>2번</li>
@@ -119,6 +123,21 @@
       <Html />
     </ul>
   )
+}
+
+const App = () => {
+  return (
+    <> 
+      <Page1 />
+      
+      <Main />
+
+      <Page2 />
+    </>
+  )
+}
+
+export default App
 ```
 내가 배워야 되는 점
 - 위에 코드를 응용함
