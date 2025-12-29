@@ -154,3 +154,79 @@ export default App
   - `return`에서 사용한 `<ul></ul>`과 겹치지 않음
   - 화면에 `<ul></ul>`이 출력되지 않음
 - `<li></li>`리스트를 유지해서 선생님이 힌트 주신 방법을 그대로 사용함
+
+이채훈님 답2
+```
+const Page1 = () => <h1>상단 화면</h1>
+const Page2 = () => <h1>하단 화면</h1>
+
+const Main = () => {
+  const Html = () => {
+    const html2 = []
+    for (let i = 1; i < 4; i++) {
+      html2.push(<li key={i}>{i}번</li>)
+    }
+
+  return ( 
+    <>{html2}</>
+  )
+}
+  return<Html />
+}
+
+const App = () => {
+  return (
+    <> 
+      <Page1 />
+      <ul>
+      <Main />
+      </ul>
+      <Page2 />
+    </>
+  )
+}
+
+export default App
+```
+- `for문`을 이용할 수 있음
+- `.push` 함수를 이용하는게 포인트
+- `<Main />` 위아래에 `<ul></ul>`을 넣는 방법이 있음
+
+이채훈님 답 3
+```
+const Page1 = () => <h1>상단 화면</h1>
+const Page2 = () => <h1>하단 화면</h1>
+
+const Main = () => {
+  const Html = () => {
+    const html2 = []
+    for (let i = 1; i < 4; i++) {
+      html2.push(<li key={i}>{i}번</li>)
+    }
+
+  return ( 
+    <>{html2}</>
+  )
+}
+  return(
+  <ul>
+  <Html />
+  </ul>
+  )
+}
+
+const App = () => {
+  return (
+    <> 
+      <Page1 />
+      
+      <Main />
+      
+      <Page2 />
+    </>
+  )
+}
+
+export default App
+```
+- `return`의 <Html /> 위아래에 `<ul></ul>`을 넣는 방법이 있음
