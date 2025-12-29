@@ -274,3 +274,41 @@ export default App
 - `arr`을 이용해서 꺼내오는 방법을 사용
 - `for문` 사용
 - `.push` 사용
+
+<h3> 강사님 답 </h3>
+```
+const Page1 = () => <h1>상단 화면</h1>
+const Page2 = () => <h1>하단 화면</h1>
+
+const Main = () => {
+  const arr = ["1번", "2번", "3번"]
+  const page3 = (v, i) => <li key ={i}>{v}</li>
+    const list = []
+    for (const i in arr) {
+      list[list.length] = page3(arr[i], i)
+    }
+
+  return ( 
+    <ul>
+    {list}
+    </ul>
+  )
+}
+
+const App = () => {
+  return (
+    <> 
+      <Page1 />
+      
+      <Main />
+      
+      <Page2 />
+    </>
+  )
+}
+
+export default App
+```
+- return에 들어오는 형식의 `list`는 `<li key ={i}>{v}</li>` javascript 입장에서는 JSX 형식의 object이다
+  - 이 형식을 React가 DOM(Document)을 만들기 전 단계의 데이터 구조
+- `arr[i]` 가 `v`고 
