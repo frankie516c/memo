@@ -276,6 +276,7 @@ export default App
 - `.push` 사용
 
 <h3> 강사님 답 </h3>
+
 ```
 const Page1 = () => <h1>상단 화면</h1>
 const Page2 = () => <h1>하단 화면</h1>
@@ -312,3 +313,16 @@ export default App
 - return에 들어오는 형식의 `list`는 `<li key ={i}>{v}</li>` javascript 입장에서는 JSX 형식의 object이다
   - 이 형식을 React가 DOM(Document)을 만들기 전 단계의 데이터 구조
 - `arr[i]` 가 `v`고 
+
+전체 실행 흐름
+1. React가 <App />을 만남
+2. App() 실행
+3. <Page1 /> → Page1() 실행
+4. <Main /> → Main() 실행
+- arr 생성
+- page3 생성
+- list 생성
+5. <Page2 /> → Page2() 실행
+6. JSX 트리 완성
+7. React가 Virtual DOM 비교
+8. 실제 DOM 생성 / 업데이트
