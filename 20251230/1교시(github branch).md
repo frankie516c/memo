@@ -33,6 +33,7 @@ npm create vite@latest 20251230
 - Javascipt
 - No
 - Yes
+=> vite 설치 완료
 
 - `ctrl` + `ctrl`로 종료 후
 - `git status` 입력
