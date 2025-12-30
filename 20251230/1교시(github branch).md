@@ -1,3 +1,5 @@
+<h3> Branch 만들기 </h3>
+
 ```
 git clone (주소)
 ```
@@ -19,3 +21,18 @@ git checkout 2-조윤주
 git branch
 ```
 - 입력시 `* 2-조윤주`라고 뜨고 밑에 `main`이 뜨면 잘 된 것
+
+<h3> 새로운 프로젝트 만들기 </h3>
+
+알맞은 경로에 찾아가서 (내가 맨날 잘못하는 습관)
+```
+npm create vite@latest 20251230
+```
+- Y
+- React
+- Javascipt
+- No
+- Yes
+
+- `ctrl` + `ctrl`로 종료 후
+- `git status` 입력
