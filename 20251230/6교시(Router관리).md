@@ -111,14 +111,15 @@ export default Page2
 <img width="157" height="446" alt="image" src="https://github.com/user-attachments/assets/9b295a6b-28bd-4b68-9887-6bced48511c1" />
 
 <H3> 강사님 GITHUB </H3>
-경로: https://github.com/ESG-EDU/STUDY_FILES/tree/main/study01
-확인할 부분들:
-- package.json
-- package-lock.json // 13번줄 `"react-router": "^7.11.0"`
-- vite.config.js // 17번줄 `@router` 추가
-src > pages > 
-- App.jsx // 간략화
-- Page1.jsx // export
-- Page2.jsx // export
-src > router > 
-- index.jsx // 아예 새롭게 생성해서 관리한다고 생각하는게 편할듯
+
+경로: https://github.com/ESG-EDU/STUDY_FILES/tree/main/study01<br />
+확인할 부분들:<br />
+- package.json<br />
+- package-lock.json // 13번줄 `"react-router": "^7.11.0"`<br />
+- vite.config.js // 17번줄 `@router` 추가<br />
+src > pages > <br />
+- App.jsx // 간략화<br />
+- Page1.jsx // export<br />
+- Page2.jsx // export<br />
+src > router > <br />
+- index.jsx // 아예 새롭게 생성해서 관리한다고 생각하는게 편할듯<br />
