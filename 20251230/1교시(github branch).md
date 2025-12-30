@@ -44,3 +44,5 @@ git status
 ```
 <img width="594" height="208" alt="image" src="https://github.com/user-attachments/assets/c464ad22-5aef-4f8a-91e9-df1b846f6e3c" />
 
+<h3> 프로젝트 Push 해보기 </h3>
+Turn Sushi > (Repositories) 25-12-30 > main 버튼 누르기 > 개인 Branches 눌러보기 > 들어가보면 새로운 폴더가 생성됨 (README.MD에서 작성한 내용도 보임)
