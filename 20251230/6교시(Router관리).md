@@ -108,3 +108,4 @@ const Page2 = () => <h1>두번째 화면 입니다.</h1>
 
 export default Page2
 ```
+<img width="145" height="245" alt="image" src="https://github.com/user-attachments/assets/884bbdfe-4e93-4cea-aefe-c6a5fd0484bc" />
