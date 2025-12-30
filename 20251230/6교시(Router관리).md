@@ -108,7 +108,7 @@ const Page2 = () => <h1>두번째 화면 입니다.</h1>
 
 export default Page2
 ```
-<img width="157" height="446" alt="image" src="https://github.com/user-attachments/assets/9b295a6b-28bd-4b68-9887-6bced48511c1" />
+<img width="146" height="448" alt="image" src="https://github.com/user-attachments/assets/bfd1835d-2e41-4a02-b171-893469aff2a1" />
 
 <H3> 강사님 GITHUB </H3>
 
