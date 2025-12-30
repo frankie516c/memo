@@ -28,12 +28,16 @@ git branch
 ```
 npm create vite@latest 20251230
 ```
+vite 설치 세부 사항
 - Y
 - React
 - Javascipt
-- No
-- Yes
-=> vite 설치 완료
+- No/Yes (상관 없음)
+- Yes/No (상관 없음)
 
-- `ctrl` + `ctrl`로 종료 후
-- `git status` 입력
+`ctrl` + `ctrl`로 종료 후
+```
+git status
+```
+<img width="594" height="208" alt="image" src="https://github.com/user-attachments/assets/c464ad22-5aef-4f8a-91e9-df1b846f6e3c" />
+
