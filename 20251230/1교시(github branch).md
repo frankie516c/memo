@@ -1,3 +1,6 @@
+<h3> Issue 만들기 </h3>
+Turn Sushi > 25-12-30 > ISSUE > New issue > 만들어진 이슈 클릭 > Projects 연결
+
 <h3> Branch 만들기 </h3>
 
 ```
