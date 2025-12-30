@@ -114,11 +114,11 @@ export default Page2
 경로: https://github.com/ESG-EDU/STUDY_FILES/tree/main/study01
 확인할 부분들:
 - package.json
-- package-lock.json
-- vite.config.js
+- package-lock.json // 13번줄 `"react-router": "^7.11.0"`
+- vite.config.js // 17번줄 `@router` 추가
 src > pages > 
-- App.jsx
-- Page1.jsx
-- Page2.jsx
+- App.jsx // 간략화
+- Page1.jsx // export
+- Page2.jsx // export
 src > router > 
-- index.jsx
+- index.jsx // 아예 새롭게 생성해서 관리한다고 생각하는게 편할듯
