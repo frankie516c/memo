@@ -109,3 +109,16 @@ const Page2 = () => <h1>두번째 화면 입니다.</h1>
 export default Page2
 ```
 <img width="157" height="446" alt="image" src="https://github.com/user-attachments/assets/9b295a6b-28bd-4b68-9887-6bced48511c1" />
+
+<H3> 강사님 GITHUB </H3>
+경로: https://github.com/ESG-EDU/STUDY_FILES/tree/main/study01
+확인할 부분들:
+- package.json
+- package-lock.json
+- vite.config.js
+src > pages > 
+- App.jsx
+- Page1.jsx
+- Page2.jsx
+src > router > 
+- index.jsx
