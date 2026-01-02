@@ -8,7 +8,7 @@ data, setData
 
 - `return (` 화면을 그려주는거니까 이 밖에 함수가 있어도 얘 안에 있는게 먼저 바뀐다<br />
 - `value={txt} onChange={e => setTxt(e.target.value)}/>` 얘때매 칸에 글이 써짐<br />
-**- `e.preventDefault()`: form 태그의 기본 역할을 막는 태그<br />**
+**- `e.preventDefault()`: form 태그의 기본 역할을 막는 태그**<br />
 **- `if(txt === '') return`: 예외처리 (입력창에 아무것도 쓰지 않았을 경우 아무것도 담지 않겠다는 것)**
 - `setArray([txt, ...array])`: state 값 변경
   - `[]`여기에 들어가는건 인자값이라고 불림react는 함수를 사용해야 하기 때문에 useState을 쓴다
