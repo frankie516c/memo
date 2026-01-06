@@ -1,3 +1,4 @@
+```
 import { useState } from "react"
 
 const Page4 = () => {
@@ -47,3 +48,4 @@ const Page4 = () => {
 }
 
 export default Page4
+```
