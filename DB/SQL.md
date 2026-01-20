@@ -431,3 +431,6 @@ SELECT dept_no, COUNT(emp_no) AS 수
  IN ('d001', 'd002', 'd009')
  GROUP BY dept_no;
 ```
+
+https://github.com/ESG-EDU/WEB_STUDY/tree/main/database
+https://github.com/ESG-EDU/Docs/tree/main/database
