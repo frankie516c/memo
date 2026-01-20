@@ -137,7 +137,7 @@ SELECT '가수인가?' AS TXT, 'IU' AS NAME
 <img width="436" height="300" alt="image" src="https://github.com/user-attachments/assets/83bdcd83-4f24-42ec-bf13-eadfa608a3c1" />
 
 
-==================================
+==================================<br />
 내가 푼 문제들 
 ```
 -- 4번 문제
@@ -197,7 +197,7 @@ WHERE first_name LIKE '%i';
 select emp_no, first_name from employees
 WHERE first_name NOT LIKE 'b%';
 ```
-==================================
+==================================<br />
 
 잘못푼거
 ```
@@ -206,9 +206,8 @@ FROM employees
 WHERE SUBSTR(hire_date, 1, 4) > '1986';
 ```
 
-==================================
+==================================<br />
 STUDY 03
-==================================
 
 <img width="414" height="149" alt="image" src="https://github.com/user-attachments/assets/903376e5-ee50-48a8-b9c7-4e08c5269645" />
 
@@ -221,7 +220,7 @@ select insert('abcdefg', 2, 0, 'wow');
 
 select insert('abcdefg', 2, 3, '');
 ```
-==================================
+==================================<br />
 문제 풀이
 ```
 -- [문제 1] 부서의 현재 매니저 정보만 조회
