@@ -135,3 +135,259 @@ SELECT '가수인가?' AS TXT, 'IU' AS NAME
 
 `IS NOT NULL`<br />
 <img width="436" height="300" alt="image" src="https://github.com/user-attachments/assets/83bdcd83-4f24-42ec-bf13-eadfa608a3c1" />
+
+
+==================================
+내가 푼 문제들 
+```
+-- 4번 문제
+SELECT emp_no, hire_date, first_name FROM employees
+WHERE hire_date >= '1986-01-01';
+
+-- 5번 문제
+SELECT emp_no, dept_no, from_date FROM dept_manager
+WHERE from_date >= '1990-01-01';
+
+-- 6번 문제
+SELECT emp_no, hire_date FROM employees
+WHERE hire_date <= '1990-01-01';
+
+-- 7번 문제
+SELECT emp_no, gender, hire_date FROM employees
+WHERE hire_date >= '1990-01-01';
+
+-- 8번 문제
+select emp_no, salary, from_date from salaries
+WHERE salary >= 60000
+AND from_date = '1990-01-01';
+
+-- 9번 문제
+select emp_no, dept_no from dept_manager
+WHERE dept_no IN('d001','d002');
+
+-- 10번 문제
+select emp_no, title from titles
+WHERE title IN('staff', 'engineer');
+
+-- 11번 문제
+select emp_no, dept_no from dept_manager
+WHERE dept_no != 'd003';
+
+-- 12번 문제
+select emp_no, salary from salaries
+WHERE salary BETWEEN '60000' AND '70000';
+
+-- 14번 문제
+select emp_no, dept_no from dept_manager
+WHERE dept_no NOT IN('d001', 'd002');
+
+-- 15번 문제
+select emp_no, first_name from employees
+WHERE first_name LIKE 'b%';
+
+-- 16번 문제
+select emp_no, first_name from employees
+WHERE first_name LIKE '_r%';
+
+-- 17번 문제
+select emp_no, first_name from employees
+WHERE first_name LIKE '%i';
+
+-- 18번 문제
+select emp_no, first_name from employees
+WHERE first_name NOT LIKE 'b%';
+```
+==================================
+
+잘못푼거
+```
+SELECT emp_no, hire_date, first_name
+FROM employees
+WHERE SUBSTR(hire_date, 1, 4) > '1986';
+```
+
+==================================
+STUDY 03
+==================================
+
+<img width="414" height="149" alt="image" src="https://github.com/user-attachments/assets/903376e5-ee50-48a8-b9c7-4e08c5269645" />
+
+<img width="350" height="140" alt="image" src="https://github.com/user-attachments/assets/081120d4-6769-435b-a060-b042cc6ed45a" />
+
+```
+SELECT 'one' + 'two' + 'three';select insert('abcdefg', 2, 1, 'wow');
+
+select insert('abcdefg', 2, 0, 'wow');
+
+select insert('abcdefg', 2, 3, '');
+```
+==================================
+문제 풀이
+```
+-- [문제 1] 부서의 현재 매니저 정보만 조회
+SELECT * FROM edu.departments WHERE dept_no = 'd001';
+SELECT * FROM edu.dept_manager WHERE dept_no = 'd001';
+
+SELECT d.dept_name, dm.emp_no
+FROM edu.dept_manager AS dm
+INNER JOIN edu.departments AS d
+ON (dm.dept_no = d.dept_no)
+WHERE dm.to_date = '9999-01-01'
+;
+
+-- [문제 2] 사원의 사번, 이름, 직책 조회 단, 현재 직책만 조회
+SELECT * FROM edu.employees WHERE emp_no = 10001;
+SELECT * FROM edu.titles WHERE emp_no = 10001;
+
+SELECT e.emp_no, e.first_name, t.title
+FROM edu.employees AS e
+INNER JOIN edu.titles AS t
+ON (e.emp_no = t.emp_no)
+WHERE t.to_date = '9999-01-01'
+;
+```
+
+강사님 정답
+```
+SELECT * FROM edu.employees WHERE emp_no = 10001;
+SELECT * FROM edu.titles WHERE emp_no = 10001;
+
+SELECT e.emp_no, e.first_name, t.title
+FROM edu.employees AS e
+INNER JOIN edu.titles AS t
+ON (e.emp_no = t.emp_no AND t.to_date = '9999-01-01')
+;
+```
+
+다른 이유
+
+**결론부터 말하면**
+👉 **INNER JOIN에서는 두 쿼리가 논리적으로 완전히 동일하고 결과도 같다.**
+다만 **SQL의 의미적 위치(ON vs WHERE)** 차이를 이해하는 게 핵심이야.
+
+---
+
+## 1️⃣ 네 코드와 강사님 코드의 차이점
+
+### ✅ 네가 작성한 코드
+
+```sql
+FROM edu.employees AS e
+INNER JOIN edu.titles AS t
+ON (e.emp_no = t.emp_no)
+WHERE t.to_date = '9999-01-01'
+```
+
+👉 의미
+
+1. `emp_no`로 먼저 조인
+2. 조인된 결과 중에서
+3. **현재 직책(`to_date = '9999-01-01'`)만 필터링**
+
+---
+
+### ✅ 강사님 코드
+
+```sql
+FROM edu.employees AS e
+INNER JOIN edu.titles AS t
+ON (e.emp_no = t.emp_no AND t.to_date = '9999-01-01')
+```
+
+👉 의미
+
+1. 조인할 때부터
+2. **현재 직책인 데이터만 대상으로 조인**
+
+---
+
+## 2️⃣ 왜 결과가 같을까? (중요 포인트)
+
+### 🔹 INNER JOIN의 특성
+
+INNER JOIN은
+
+> **ON 조건을 만족하는 행만 결과로 남김**
+
+그래서 아래 두 문장은 **논리적으로 동일**해져:
+
+```sql
+INNER JOIN t ON A AND B
+```
+
+```sql
+INNER JOIN t ON A
+WHERE B
+```
+
+➡️ **INNER JOIN에서는**
+
+* `ON`에 쓰든
+* `WHERE`에 쓰든
+  👉 결과가 같다
+
+---
+
+## 3️⃣ 그럼 왜 강사님은 ON에 썼을까?
+
+### 📌 이유 1: 의미적으로 더 정확
+
+* `ON` → **조인 조건**
+* `WHERE` → **결과 필터링**
+
+👉
+`t.to_date = '9999-01-01'` 은
+“조인 대상 자체의 조건”이므로
+**ON에 쓰는 게 개념적으로 더 자연스럽다**
+
+---
+
+### 📌 이유 2: OUTER JOIN에서는 결과가 달라짐 (핵심!)
+
+지금은 INNER JOIN이라서 같지만
+**LEFT JOIN / RIGHT JOIN이면 결과가 달라진다**
+
+#### 예시 (LEFT JOIN)
+
+```sql
+-- ❌ WHERE에 쓰면
+LEFT JOIN titles t ON e.emp_no = t.emp_no
+WHERE t.to_date = '9999-01-01';
+```
+
+👉 `titles`가 없는 사원은 **전부 탈락**
+→ LEFT JOIN 의미가 사라짐
+
+```sql
+-- ✅ ON에 쓰면
+LEFT JOIN titles t 
+ON e.emp_no = t.emp_no 
+AND t.to_date = '9999-01-01';
+```
+
+👉 사원은 모두 유지
+👉 현재 직책이 없으면 title이 NULL
+
+📌 **이 차이 때문에 실무에서는 ON에 조건을 넣는 습관을 들인다**
+
+---
+
+## 4️⃣ 정리 한 줄 요약 ✨
+
+| 구분          | INNER JOIN | OUTER JOIN |
+| ----------- | ---------- | ---------- |
+| ON vs WHERE | 결과 동일      | 결과 달라짐     |
+| 강사님 방식      | 👍 권장      | 👍 필수      |
+| 네 코드        | ❌ 틀리진 않음   | ⚠️ 위험      |
+
+---
+
+## ✅ 결론
+
+* 네 코드 **틀린 거 아님**
+* 강사님 코드는 **개념적으로 더 정확하고 확장성 있는 방식**
+* **“조인 조건은 ON, 결과 필터는 WHERE”**
+  👉 이 원칙만 기억하면 돼
+
+원하면
+👉 LEFT JOIN 예제를 데이터 기준으로 직접 비교해서 보여줄 수도 있어!
