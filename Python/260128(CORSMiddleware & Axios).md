@@ -338,3 +338,5 @@ def user(request: Request):
 <img width="483" height="837" alt="image" src="https://github.com/user-attachments/assets/95c75e84-53e1-4269-a2a2-df557271c8b1" />
 - csrf token과 카카오 토큰 차이
 <img width="506" height="814" alt="image" src="https://github.com/user-attachments/assets/334b6ed2-15c7-42a1-b29e-1a54af57d723" />
+- import.meta.env.VITE APP FASTAPI URL 이해하기
+<img width="484" height="848" alt="image" src="https://github.com/user-attachments/assets/31ec9333-db84-4bd6-a790-530f7cd0b711" />
