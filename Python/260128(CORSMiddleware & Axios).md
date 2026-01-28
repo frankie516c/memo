@@ -324,4 +324,11 @@ def user(request: Request):
 - 대표적인 용도들: CORS 처리, 쿠키 / 세션 확인, 인증 토큰 검사 (JWT 등), 요청 시간 측정 (로깅)
 - 예시: 모든 요청에 대해 브라우저에서 온 요청인지 검사 -> 허용된 origin이면 통과, 아니면 차단
 <img width="269" height="225" alt="image" src="https://github.com/user-attachments/assets/bd79293e-ab93-4a79-892b-e4d58f30719c" />
+
 - https://fastapi.tiangolo.com/advanced/middleware/?h=cors
+
+
+[내가 계속 헷갈린 부분]
+- frontend와 backend의 url 주소
+	- backend의 `main.py`에는 "http://localhost:5173"를 입력해야 하고
+ 	- frontend의 `login.py`과 `.env.py`에는 "http://localhost:8000"를 입력해야 함
