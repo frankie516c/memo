@@ -332,3 +332,9 @@ def user(request: Request):
 - frontend와 backend의 url 주소
 	- backend의 `main.py`에는 "http://localhost:5173"를 입력해야 하고
  	- frontend의 `login.py`과 `.env.py`에는 "http://localhost:8000"를 입력해야 함
+
+[추가 사항]
+- cookie와 local storage의 차이
+<img width="483" height="837" alt="image" src="https://github.com/user-attachments/assets/95c75e84-53e1-4269-a2a2-df557271c8b1" />
+- csrf token과 카카오 토큰 차이
+<img width="506" height="814" alt="image" src="https://github.com/user-attachments/assets/334b6ed2-15c7-42a1-b29e-1a54af57d723" />
