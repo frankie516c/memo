@@ -2,7 +2,7 @@
 <img width="932" height="509" alt="image" src="https://github.com/user-attachments/assets/67262d2b-87cd-48c9-9322-ee4b5f1de1ba" />
 
 위 오류를 해결하기 위해 backend>main.py `CORSMiddleware` 허용 필요
-https://fastapi.tiangolo.com/advanced/middleware/?h=cors
+- https://fastapi.tiangolo.com/advanced/middleware/?h=cors
 
 그래서 하나의 서버를 지정을 해준다
 ```
@@ -183,6 +183,12 @@ FastAPI ──(Set-Cookie)──▶ Browser
 Cookie:<br />
 user = test@test.com
 
+AXIOS:
+- https://axios-http.com/docs/example
+<img width="353" height="462" alt="image" src="https://github.com/user-attachments/assets/453fe238-521f-49c1-a18e-314d1679e4d2" />
+
+
+
 강사님이 만들어준 axios 사용한 login<br />
 study18>frontend>src>pages>login.jsx
 ```
@@ -311,3 +317,11 @@ def user(request: Request):
   else:
     return {"status": False}
 ```
+
+[Middleware]
+- 요청(Request)이 라우터로 들어가기 전과, 응답(Response)이 사용자에게 나가기 전에 “중간에서 한 번 더 거쳐가는 공통 처리 로직”
+- 왜 쓰냐? 라우터마다 똑같은 코드를 쓰기 싫을 때 사용해.
+- 대표적인 용도들: CORS 처리, 쿠키 / 세션 확인, 인증 토큰 검사 (JWT 등), 요청 시간 측정 (로깅)
+- 예시: 모든 요청에 대해 브라우저에서 온 요청인지 검사 -> 허용된 origin이면 통과, 아니면 차단
+<img width="269" height="225" alt="image" src="https://github.com/user-attachments/assets/bd79293e-ab93-4a79-892b-e4d58f30719c" />
+- https://fastapi.tiangolo.com/advanced/middleware/?h=cors
