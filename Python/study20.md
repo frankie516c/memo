@@ -1,3 +1,8 @@
+참고 페이지
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_btoa
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_atob
+https://www.npmjs.com/package/react-cookie
+
 main.py
 ```
 from fastapi import FastAPI, Request, HTTPException
