@@ -1,0 +1,32 @@
+/* ===== 공통 리셋 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f5f3ee; /* 베이지톤 */
+  color: #333;
+}
+
+/* ===== 전체 래퍼 ===== */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== 카드 ===== */
+.auth-box {
+  width: 420px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+/* ===== 제목 ===== */
+.auth-title {
+  text-align: c
